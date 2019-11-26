@@ -41,8 +41,8 @@ TESTS = {
     ],
     "Extra": [
         {
-            "input": [[], ()],
-            "answer": 0
+            "input": [[], []],
+            "answer": 1
         },
     ]
 }
