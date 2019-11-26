@@ -1,0 +1,67 @@
+<p align="justify">
+    In computer science, a <a href="https://en.wikipedia.org/wiki/Tree_(data_structure)" title="Tree on Wiki" target="_blank">tree</a>
+    is an abstract data type that simulates a hierarchical tree structure.
+    All tree elements are called <b>nodes</b>. The lines connecting elements (or nodes) are called <b>branches</b> and nodes without children are called <b>leaves</b> or <b>end-nodes</b>.
+    The topmost node in a tree is called the <b>root node</b>.
+</p>
+
+<!--
+<p style="text-align: center;">
+    <img  title="fly's in the jar" src="{{MEDIA}}example.png" alt="example" style="max-height: 250px"/>
+</p>
+-->
+
+<p align="justify">
+    In this mission you are given an arbitrary tree and a target value, your task is to calculate how many leaves of the tree are to the target value.
+    The nodes of the tree might be represented by any of these data types and/or their combinations: int, str, list, tuple, dict.<br>
+    For better understanding have a look at the illustrations below.
+    If encounter difficulties, try to watch this <a href="https://youtu.be/UANN2Eu6ZnM?t=1354" title="video" target="_blank">video</a> exposing the use of the incremental development approach.
+</p>
+
+<p>
+    <strong>Input: </strong> Two arguments:
+    <ul>
+    <li>the first is an arbitrary <b>tree</b> data structure</li>
+    <li>the second is a <b>target</b> value, any type of [int, str, list, tuple, dict]</li>
+    </ul>
+</p>
+
+<p>
+    <strong>Output: </strong> The number of the leaves are equal to the given target value, integer.
+</p>
+
+
+<!-- Give some usage examples -->
+<div class="for_info_only">
+    <p>
+        <strong>Example:</strong>
+    </p>
+
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">
+treeWalker([1, "2", 3, [[3], 1, {1: "one"}]], 1) == 2
+treeWalker({"one": 1, "two": [{1: "one", 2: "two"}, 1, "1", "one"]}, 1) == 2
+treeWalker({"one": [1, 2], "two": [{1: "one", 2: "two"}, (1, 2), "1", "one"]}, [1, 2]) == 2
+treeWalker(5, 5) == 1
+</pre>
+{% else %}
+<pre class="brush: python">
+tree_walker(tree=[1, "2", 3, [[3], 1, {1: "one"}]], target=1) == 2
+tree_walker(tree={"one": 1, "two": [{1: "one", 2: "two"}, 1, "1", "one"]}, target=1) == 2
+tree_walker(tree={"one": [1, 2], "two": [{1: "one", 2: "two"}, (1, 2), "1", "one"]}, target=[1, 2]) == 2
+tree_walker(tree=5, target=5) == 1
+</pre>
+{% endif %}
+</div>
+
+
+<!-- Here you can explain how it can be used in development -->
+
+<!-- The section is optional -->
+<p>
+    <strong>Precondition:</strong><br>
+    <ul>
+        <li>n ∈ [1; 1000] - nodes count</li>
+        <li>any node of a given tree may be any type of [int, str, list, tuple, dict]</li>
+    </ul>
+</p>
