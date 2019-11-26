@@ -35,7 +35,7 @@ TESTS = {
             "answer": 2
         },
         {
-            "input": [{1: "one"}, {2: "two"}, "two", ["two", {"two": "one"}], "two"],
+            "input": [({1: "one"}, {2: "two"}, "two", ["two", {"two": "one"}]), "two"],
             "answer": 3
         },
     ],

@@ -1,19 +1,19 @@
-def escape(jar, fly):
-    W, H, d = jar
-    x0, y0, vx, vy = fly
+def tree_walker(tree, target):
 
     # your code here
-    return False
+    return 0
 
 
 if __name__ == '__main__':
     print("Example:")
-    print(escape([1000, 1000, 200], [0, 0, 100, 0]))
+    print(tree_walker([1, "2", 3, [[3], 1, {1: "one"}]], 1))
     
     # These "asserts" are used for self-checking and not for an auto-testing
-    assert escape([1000, 1000, 200], [0, 0, 100, 0]) == False, "First"
-    assert escape([1000, 1000, 200], [450, 50, 0, -100]) == True, "Second"
-    assert escape([1000, 1000, 200], [450, 1000, 100, 0]) == False, "Third"
-    assert escape([1000, 1000, 200], [250, 250, -10, -50]) == False, "Fourth"
-    assert escape([1000, 2000, 200], [20, 35, 100, 175]) == True, "Fifth"
+    assert tree_walker([1, "2", 3, [[3], 1, {1: "one"}]], 1) == 2, "1st"
+    assert tree_walker({"one": 1, "two": [{1: "one", 2: "two"}, 1, "1", "one"]}, 1) == 2, "2nd"
+    assert tree_walker({"one": [1, 2], "two": [{1: "one", 2: "two"}, (1, 2), "1", "one"]}, [1, 2]) == 2, "3rd"
+    assert tree_walker(5, 5) == 1, "4th"
+    assert tree_walker((5, 6, 2, "1"), 1), 0) == 0, "5th"
+    assert tree_walker([[dict()], [[[3], (3, 5)]], (), []], 3) == 2, "6th"
+    assert tree_walker(({1: "one"}, {2: "two"}, "two", ["two", {"two": "one"}]), "two") == 3, "7th"
     print("Coding complete? Click 'Check' to earn cool rewards!")
