@@ -43,10 +43,10 @@ treeWalker(5, 5) == 1                                                           
 </pre>
 {% else %}
 <pre class="brush: python">
-tree_walker(tree=[1, "2", 3, [[3], 1, {1: "one"}]], target=1) == 2                                          #example №1
-tree_walker(tree={"one": 1, "two": [{1: "one", 2: "two"}, 1, "1", "one"]}, target=1) == 2                   #example №2
-tree_walker(tree={"one": [1, 2], "two": [{1: "one", 2: "two"}, [1, 2], "1", "one"]}, target=[1, 2]) == 2    #example №3
-tree_walker(tree=5, target=5) == 1                                                                          #example №4
+tree_walker(tree=[1, "2", 3, [[3], 1, {1: "one"}]], target=1) == 2                                        #example №1
+tree_walker(tree={"one": 1, "two": [{1: "one", 2: "two"}, 1, "1", "one"]}, target=1) == 2                 #example №2
+tree_walker(tree={"one": [1, 2], "two": [{1: "one", 2: "two"}, [1, 2], "1", "one"]}, target=[1, 2]) == 2  #example №3
+tree_walker(tree=5, target=5) == 1                                                                        #example №4
 </pre>
 {% endif %}
 </div>
